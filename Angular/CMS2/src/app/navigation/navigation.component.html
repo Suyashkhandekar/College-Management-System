@@ -1,0 +1,69 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow fixed-top p-0" *ngIf="visible">
+    <span>{{viewedPage | titlecase}}</span>
+    <a class="navbar-brand d-flex align-items-center px-4 px-lg-5" aria-current="page" routerLink="/home" routerLinkActive="active" href="">
+        
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>SK COET</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a class="nav-item nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active" href="">Home</a>
+            <!--<a href="/CMS2/src/app/home/home.component.html" class="nav-item nav-link active">Home</a>-->
+            <!--<a href="/CMS2/src/app/about/about.component.html" class="nav-item nav-link">About</a>-->
+            <a class="nav-item nav-link" aria-current="page" routerLink="/about" routerLinkActive="active" href="">About</a>
+            <!--<a href="/CMS2/src/app/courses/courses.component.html" class="nav-item nav-link">Departments</a>-->
+            <div class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Departments</a>
+                <div class="dropdown-menu fade-down m-0">  
+                    <!--<a href="/CMS2/src/app/me/me.component.html" class="dropdown-item">Mechanical Engineering</a>-->
+                    <a class="dropdown-item" aria-current="page" routerLink="/me" routerLinkActive="active" href="">Mechanical Engineering</a>
+                    <!--<a href="/CMS2/src/app/ee/ee.component.html" class="dropdown-item">Electronics Engineering</a>-->
+                    <a class="dropdown-item" aria-current="page" routerLink="/ee" routerLinkActive="active" href="">Electronics Engineering</a>
+                    <!--<a href="/CMS2/src/app/ce/ce.component.html" class="dropdown-item">Computer Engineering</a>-->
+                    <a class="dropdown-item" aria-current="page" routerLink="/ce" routerLinkActive="active" href="">Computer Engineering</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Placement</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <!--<a href="/CMS2/src/app/tp/tp.component.html" class="dropdown-item">T & P Department</a>-->
+                    <a class="dropdown-item" aria-current="page" routerLink="/tp" routerLinkActive="active" href="">T & P Department</a>
+                    <!--<a href="/CMS2/src/app/camp-sel/camp-sel.component.html" class="dropdown-item">Campus Selection</a>-->
+                    <a class="dropdown-item" aria-current="page" routerLink="/camp-sel" routerLinkActive="active" href="">Campus Selection</a>
+                    <!--<a href="/CMS2/src/app/top-rec/top-rec.component.html" class="dropdown-item">Top Recruiter</a>
+                    <a class="dropdown-item" aria-current="page" routerLink="/top-rec" routerLinkActive="active" href="">Top Recruiter</a>-->
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <!--<a href="/CMS2/src/app/admin/admin.component.html" class="dropdown-item">Admin</a>-->
+                    <a class="dropdown-item" aria-current="page" routerLink="/admin" routerLinkActive="active" href="">Admin</a>
+                    <!--<a href="/CMS2/src/app/faculty/faculty.component.html" class="dropdown-item">Faculty</a>-->
+                    <a class="dropdown-item" aria-current="page" routerLink="/faculty" routerLinkActive="active" href="">Faculty</a>
+                    <!--<a href="/CMS2/src/app/student/student.component.html" class="dropdown-item">Student</a>-->
+                    <a class="dropdown-item" aria-current="page" routerLink="/student" routerLinkActive="active" href="">Student</a>
+                </div>
+            </div>
+            <!--<a href="/CMS2/src/app/sign-up/sign-up.component.html" class="nav-item nav-link">Sign Up</a>-->
+            <!--<a class="nav-item nav-link" aria-current="page" routerLink="/sign-up" routerLinkActive="active" href="">Sign Up</a>-->
+            <!--<div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Sign Up</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="/CMS2/src/app/faculty/faculty.component.html" class="dropdown-item">Faculty</a>
+                    <a class="dropdown-item " aria-current="page" routerLink="/faculty-sign-up" routerLinkActive="active" href="">Faculty</a>
+                    <!--<a href="/CMS2/src/app/student/student.component.html" class="dropdown-item">Student</a>
+                    <a class="dropdown-item" aria-current="page" routerLink="/student-sign-up" routerLinkActive="active" href="">Student</a>
+                </div>
+            </div>-->
+            <!--<a href="/CMS2/src/app/contact/contact.component.html" class="nav-item nav-link">Contact</a>
+            <a class="nav-item nav-link" aria-current="page" routerLink="/contact" routerLinkActive="active" href="">Contact</a>-->
+        </div>
+        <!--<a href="/CMS2/src/app/join-now/join-now.component.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>-->
+        <a class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" aria-current="page" routerLink="/student-sign-up" routerLinkActive="active" href="">Sign Up<i class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav><br><br><br>
+<!-- Navbar End -->

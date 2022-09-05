@@ -1,0 +1,200 @@
+<app-eefacultypanel></app-eefacultypanel>
+
+<div class="main">
+    <h1 style="text-align:center;"><span>Exam Result</span></h1><br><br>
+
+<div  style="margin: 30px; margin-left:0px; float: left; width: 180px;">
+<button  class="button" (click)="div1Function()">All Students Marks</button>
+</div>
+
+<div  style="margin: 30px; float: left; width: 95px; margin-left: 90px;">
+<button  class="button" (click)="div2Function()">Add</button>
+</div>
+
+<div style="margin: 30px; float: left; width: 110px;">
+<button  class="button" (click)="div3Function()">Update</button>
+</div>
+
+<div style="margin: 30px; float: left; width: 100px;">
+<button  class="button" (click)="div4Function()">Delete</button>
+</div>
+
+<div style="margin: 30px; float: left; width: 80px;">
+<button  class="button" (click)="div5Function()">Hide</button>
+</div><br><br><br><br>
+
+<div *ngIf="div1">
+    <div class="container" style="background-color:white; padding: 8px 15px 15px 15px; border-radius: 15px;width:1200px ;">
+      <h2 style="text-align:center;color: red;">All Students Marks</h2>
+          <table  cellspacing="15" style="width:100%" >
+          <tr>
+              <th>
+                 Roll No.
+              </th>
+              <th>
+                 First Name
+              </th>
+              <th>
+                 Last Name
+             </th> 
+             <th>
+                 M-I
+              </th>
+             <th>
+                 Physics
+             </th>
+             <th>
+                 Chemistry
+             </th>
+             <th>
+                 Engg. Draw.
+            </th>
+             <th>
+                 Total Marks
+             </th>
+          </tr>
+
+      
+          <tr *ngFor="let l of loginpages">
+          
+              <td>{{l.id}}</td>
+              <td>{{l.firstname}}</td>
+              <td>{{l.lastname}}</td>
+              <td>{{l.mI}}</td>
+              <td>{{l.physics}}</td>
+              <td>{{l.chemistry}}</td>
+              <td>{{l.enggdraw}}</td>
+              <td>{{l.totalmarks}}</td>
+              
+          </tr>
+  
+    </table>
+    </div><br><br>
+  </div>
+
+<div *ngIf="div2">
+<!-- <div class="operation"> -->
+  <div class="container" style="background-color:white; padding: 15px 15px 60px 15px; border-radius: 15px;width: 600px;height: 450px;">
+  <h2 style="text-align:center;color: red;">Add Students Marks</h2><br>
+<form #insertdata="ngForm" (ngSubmit)="insertdetails(insertdata)">
+
+  <div class="form-outline" style="width: 100px;"> 
+  <label class="form-label" for="form2Example1">Roll No.</label>
+  <input type="text" id="form2Example1" placeholder="rollno" class="form-control" name="id" ngModel>
+</div>
+
+<div class="form-outline" style="width: 200px;"> 
+<label class="form-label" for="form2Example2" >First Name</label>
+<input type="text" id="form2Example2" placeholder="firstname" class="form-control" name="firstname" ngModel>
+</div>
+
+<div class="form-outline" > 
+<label class="form-label" for="form2Example3">Last Name</label>
+<input type="text" id="form2Example3" placeholder="lastname" class="form-control" name="lastname" ngModel>
+</div><br><br><br><br>
+
+<div class="form-outline" style="width: 170px;"> 
+  <label class="form-label" for="form2Example4">M-I</label>
+  <input type="text" id="form2Example4" placeholder="M-I mark" class="form-control" name="mI" ngModel>
+</div>
+
+<div class="form-outline" style="width: 170px;"> 
+<label class="form-label" for="form2Example5">Physics</label>
+<input type="text" id="form2Example5" placeholder="physics mark" class="form-control" name="physics" ngModel>
+</div>
+
+<div class="form-outline" style="width: 170px;"> 
+<label class="form-label" for="form2Example6">Chemistry</label>
+<input type="text" id="form2Example6" placeholder="chemistry mark" class="form-control" name="chemistry" ngModel>
+</div>
+
+<div class="form-outline" style="width: 170px;"> 
+  <label class="form-label" for="form2Example5">Engg. Draw.</label>
+  <input type="text" id="form2Example5" placeholder="engg. draw. mark" class="form-control" name="enggdraw" ngModel>
+  </div><br><br><br>
+
+<div class="form-outline" style="width: 220px;"> 
+<label class="form-label" for="form2Example7">Total Marks</label>
+<input type="text" id="form2Example7" placeholder="total marks" class="form-control" name="totalmarks" ngModel>
+</div><br><br><br><br><br>
+  <button  class="button" type="submit" value="Insert" (click)="insertdetails(insertdata)" >Add </button><br>
+</form>
+  </div><br><br>
+  <!-- </body> -->
+<!-- </div> -->
+</div>
+
+<div *ngIf="div3">
+<!-- <div class="operation"> -->
+  <div class="container" style="background-color:white; padding: 15px 15px 60px 15px; border-radius: 15px;width: 600px;height: 450px;" >
+<h2 style="text-align:center;color: red;">Update Students Marks</h2><br>
+<form #data="ngForm" (ngSubmit)="updateLoginpage(data)">
+
+<div class="form-outline" style="width: 100px;"> 
+<label class="form-label" for="form2Example1">Roll No.</label>
+<input type="text" id="form2Example1" placeholder="rollno" class="form-control" name="id" ngModel>
+</div>
+
+<div class="form-outline" style="width: 200px;"> 
+<label class="form-label" for="form2Example2" >First Name</label>
+<input type="text" id="form2Example2" placeholder="firstname" class="form-control" name="firstname" ngModel>
+</div>
+
+<div class="form-outline" > 
+<label class="form-label" for="form2Example3">Last Name</label>
+<input type="text" id="form2Example3" placeholder="lastname" class="form-control" name="lastname" ngModel>
+</div><br><br><br><br>
+
+<div class="form-outline" style="width: 170px;"> 
+  <label class="form-label" for="form2Example4">M-I</label>
+  <input type="text" id="form2Example4" placeholder="M-I mark" class="form-control" name="mI" ngModel>
+</div>
+
+<div class="form-outline" style="width: 170px;"> 
+<label class="form-label" for="form2Example5">Physics</label>
+<input type="text" id="form2Example5" placeholder="physics mark" class="form-control" name="physics" ngModel>
+</div>
+
+<div class="form-outline" style="width: 170px;"> 
+<label class="form-label" for="form2Example5">Chemistry</label>
+<input type="text" id="form2Example5" placeholder="chemistry mark" class="form-control" name="chemistry" ngModel>
+</div>
+
+<div class="form-outline" style="width: 170px;"> 
+<label class="form-label" for="form2Example6">Engg. Draw.</label>
+<input type="text" id="form2Example6" placeholder="engg. draw. mark" class="form-control" name="enggdraw" ngModel>
+</div><br><br><br>
+
+<div class="form-outline" style="width: 220px;"> 
+<label class="form-label" for="form2Example7">Total Marks</label>
+<input type="text" id="form2Example7" placeholder="total marks" class="form-control" name="totalmarks" ngModel>
+</div><br><br><br><br><br>
+
+<button  class="button" type="submit" value="Update" (click)="updateLoginpage(data)" >Update </button><br>
+</form>
+</div><br><br>
+</div>
+<!-- </div> -->
+
+<div *ngIf="div4">
+<!-- <div class="operation"> -->
+    <div class="container" style="background-color:white; padding: 5px 5px 45px 5px; border-radius: 15px; width: 400px;">
+      <h2 style="text-align:center;color: red;">Delete Students Record</h2>
+      <form #data="ngForm" (ngSubmit)="deleteLoginpage(data)">
+      <div class="form-outline" style="width: 200px;"> 
+      <label class="form-label" >Roll No.</label>
+      <input type="text"  placeholder="rollno" class="form-control" name="id" ngModel>
+      </div><br>
+      <button  class="button" type="submit" value="Delete" (click)="deleteLoginpage(data)" >Delete </button><br>
+      </form>
+    </div>
+<!-- </div> -->
+</div>
+
+</div>
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<app-cestudentpanel></app-cestudentpanel>
+
+<div class="main">
+    <h1 style="text-align:center;"><span>Exam Result</span></h1><br><br>
+
+<div class="container" style="background-color:white; padding: 8px 15px 15px 15px; border-radius: 15px;width:1200px ;">
+    <h2 style="text-align:center;color: red;">All Students Marks</h2>
+        <table  cellspacing="15" style="width:100%" >
+        <tr>
+            <th>
+               Roll No.
+            </th>
+            <th>
+               First Name
+            </th>
+            <th>
+               Last Name
+           </th> 
+           <th>
+               M-I
+            </th>
+           <th>
+               Physics
+           </th>
+           <th>
+               Chemistry
+           </th>
+           <th>
+               Engg. Draw.
+          </th>
+           <th>
+               Total Marks
+           </th>
+        </tr>
+
+    
+        <tr *ngFor="let l of loginpages">
+        
+            <td>{{l.id}}</td>
+            <td>{{l.firstname}}</td>
+            <td>{{l.lastname}}</td>
+            <td>{{l.mI}}</td>
+            <td>{{l.physics}}</td>
+            <td>{{l.chemistry}}</td>
+            <td>{{l.enggdraw}}</td>
+            <td>{{l.totalmarks}}</td>
+            
+        </tr>
+
+  </table>
+  </div><br><br>
+</div>

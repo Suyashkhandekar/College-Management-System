@@ -1,0 +1,90 @@
+<app-studentpanel></app-studentpanel>
+
+<div class="main">
+    <h1 style="text-align:center;"><span>College Fees</span></h1><br>
+<div class="container" style="background-color:white; padding: 15px 15px 60px 15px; border-radius: 15px;width: 800px;">
+    <!-- <h2 style="text-align:center;color: red;"></h2><br> -->
+  <form #insertdata="ngForm" (ngSubmit)="insertdetails(insertdata)">
+  
+    <div class="form-outline" style="width: 400px;"> 
+        <h5 style="text-align:center;color: red;"> *College Total Fees- 80,000</h5>
+    </div>
+
+    <div class="form-outline" > 
+        <h5 style="text-align:center;color: red;"> *College Account No.-AB1002</h5>
+    </div><br><br>
+
+    <div class="form-outline" style="width: 100px;"> 
+    <label class="form-label" for="form2Example1">Roll No.</label>
+    <input type="text" id="form2Example1" placeholder="rollno" class="form-control" name="id" ngModel>
+  </div>
+  
+  <div class="form-outline" style="width: 200px;"> 
+  <label class="form-label" for="form2Example2" >First Name</label>
+  <input type="text" id="form2Example2" placeholder="firstname" class="form-control" name="firstname" ngModel>
+  </div>
+  
+  <div class="form-outline" > 
+  <label class="form-label" for="form2Example3">Last Name</label>
+  <input type="text" id="form2Example3" placeholder="lastname" class="form-control" name="lastname" ngModel>
+  </div><br><br><br><br>
+  
+  <!-- <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example4">Gender</label>
+    <input type="text" id="form2Example4" placeholder="gender" class="form-control" name="gender" ngModel>
+  </div> -->
+  
+  <div class="form-outline" style="width: 130px;"> 
+  <label class="form-label" for="form2Example4">Branch</label>
+  <input type="text" id="form2Example4" placeholder="branch" class="form-control" name="branch" ngModel>
+  </div>
+  
+  <div class="form-outline" style="width: 170px;"> 
+  <label class="form-label" for="form2Example5">Year</label>
+  <input type="text" id="form2Example5" placeholder="year" class="form-control" name="year" ngModel>
+  </div>
+  
+  <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example6">Sem</label>
+    <input type="text" id="form2Example6" placeholder="sem" class="form-control" name="sem" ngModel>
+    </div>
+  
+  <div class="form-outline" style="width: 220px;"> 
+  <label class="form-label" for="form2Example7">Mobile No.</label>
+  <input type="text" id="form2Example7" placeholder="mobileno" class="form-control" name="mobileno" ngModel>
+  </div><br>
+  
+    <!-- <div class="form-outline" style="width: 250px;"> 
+      <label class="form-label" for="form2Example8">Email address</label>
+      <input type="email" id="form2Example8" placeholder="abc@xyz.com" class="form-control" name="email" ngModel>
+     
+    </div><br><br><br><br><br> -->
+  
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example8">Payment Date</label>
+        <input type="date" id="form2Example8" placeholder="dd-mm-yyyy" class="form-control" name="date" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+      </div><br>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example9">Payment Mode</label>
+      <input type="text" id="form2Example9" placeholder="phonepay/other" class="form-control" name="pmode" ngModel>
+      <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+    </div><br>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example10">College Account No.</label>
+        <input type="text" id="form2Example10" placeholder="Account No." class="form-control" name="accno" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+    </div><br>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example11">Fees Want to Pay</label>
+        <input type="text" id="form2Example11" placeholder="fees" class="form-control" name="fees" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+    </div><br><br><br><br><br><br><br><br>
+
+    <button  class="button" type="submit" value="Insert" (click)="insertdetails(insertdata)" >Pay</button><br>
+  </form>
+    </div><br><br>
+</div>

@@ -1,0 +1,286 @@
+<!-- <br><br>
+<section class="vh-100">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <h5 class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"><span> Student Sign Up </span></h5>
+  
+                  <form  #insertdata="ngForm" (ngSubmit)="insertdetails(insertdata)">
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example1c" class="form-control" name="firstname" ngModel=" ">
+                        <label class="form-label" for="form3Example1c">First Name</label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" id="form3Example2c" class="form-control" name="lastname" ngModel=" "/>
+                          <label class="form-label" for="form3Example2c">Last Name</label>
+                        </div>
+                      </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" id="form3Example3c" class="form-control" name="email" ngModel=" "/>
+                        <label class="form-label" for="form3Example3c">Email Id</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4c" class="form-control" name="password" ngModel=" "/>
+                        <label class="form-label" for="form3Example4c">Password</label>
+                      </div>
+                    </div>
+  
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                      <label class="form-check-label" for="form2Example3">
+                        I agree all statements in terms of service
+                      </label>
+                    </div>
+                    
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      
+                      <button type="submit"  class="btn btn-primary btn-lg" value="Insert" (click)="insertdetails(insertdata)" >Submit</button>   
+                    </div>
+                
+                  </form>
+  
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="/assets/signup.webp" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+    
+  <div class="container-xxl py-5">
+
+    <!-- <div class="main"> -->
+      <h1 style="text-align:center;"><span>Student SignUp</span></h1><br><br><br>
+  
+  <div  style=" float:left; width: 50px;margin-right: 0px;">
+  <button  class="button" (click)="div1Function()">Mechanical Engg.</button>
+  </div>
+  
+  <div  style=" float: left; width: 50px;margin-left:300px;">
+  <button  class="button" (click)="div2Function()">Electronics Engg.</button>
+  </div>
+  
+  <div style=" float: left; width: 50px;margin-left:600px;">
+  <button  class="button" (click)="div3Function()">Computer Engg.</button>
+  </div><br><br><br><br>
+  
+  <!-- <div style=" float: left; width: 50px;margin-left:785px;">
+  <button  class="button" (click)="div4Function()">Hide</button>
+  </div><br><br><br><br> -->
+
+  <div *ngIf="div1">
+    <h2 style="text-align:center;"><span>M.E. Students SignUp</span></h2> 
+    <div class="container" style="background-color:white; padding: 15px 15px 60px 15px; border-radius: 15px;width: 600px;">
+      <!-- <h2 style="text-align:center;color: red;">Add Students</h2><br> -->
+    <form #insertdata="ngForm" (ngSubmit)="insertdetails1(insertdata)">
+    
+      <div class="form-outline" style="width: 100px;"> 
+      <label class="form-label" for="form2Example1">Roll No.</label>
+      <input type="text" id="form2Example1" placeholder="rollno" class="form-control" name="id" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 200px;"> 
+    <label class="form-label" for="form2Example2" >First Name</label>
+    <input type="text" id="form2Example2" placeholder="firstname" class="form-control" name="firstname" ngModel>
+    </div>
+    
+    <div class="form-outline" > 
+    <label class="form-label" for="form2Example3">Last Name</label>
+    <input type="text" id="form2Example3" placeholder="lastname" class="form-control" name="lastname" ngModel>
+    </div><br><br><br><br>
+    
+    <div class="form-outline" style="width: 170px;"> 
+      <label class="form-label" for="form2Example4">Gender</label>
+      <input type="text" id="form2Example4" placeholder="gender" class="form-control" name="gender" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example5">Branch</label>
+    <input type="text" id="form2Example5" placeholder="branch" class="form-control" name="branch" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example6">Year</label>
+    <input type="text" id="form2Example6" placeholder="year" class="form-control" name="year" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+      <label class="form-label" for="form2Example5">Sem</label>
+      <input type="text" id="form2Example5" placeholder="sem" class="form-control" name="sem" ngModel>
+      </div>
+    
+    <div class="form-outline" style="width: 220px;"> 
+    <label class="form-label" for="form2Example7">Mobile No.</label>
+    <input type="text" id="form2Example7" placeholder="mobileno" class="form-control" name="mobileno" ngModel>
+    </div><br>
+    
+      <div class="form-outline" style="width: 250px;"> 
+          <!-- <small class="text-danger">{{msg}}</small><br> -->
+        <label class="form-label" for="form2Example8">Email address</label>
+        <input type="email" id="form2Example8" placeholder="abc@xyz.com" class="form-control" name="email" ngModel>
+        <!-- <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div>  -->
+      </div><br><br><br><br><br>
+    
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example9">Password</label>
+        <input type="password" required minlength="5" maxlength="16" id="form2Example9" placeholder="password" class="form-control" name="password" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+      </div><br><br><br><br><br><br>
+      <button  class="button" type="submit" value="Insert" (click)="insertdetails1(insertdata)" >Submit</button><br>
+    </form>
+      </div><br><br>
+  </div>
+
+
+  <div *ngIf="div2">
+    <h2 style="text-align:center;"><span>E.E. Students SignUp</span></h2> 
+    <div class="container" style="background-color:white; padding: 15px 15px 60px 15px; border-radius: 15px;width: 600px;">
+      <!-- <h2 style="text-align:center;color: red;">Add Students</h2><br> -->
+    <form #insertdata="ngForm" (ngSubmit)="insertdetails2(insertdata)">
+    
+      <div class="form-outline" style="width: 100px;"> 
+      <label class="form-label" for="form2Example1">Roll No.</label>
+      <input type="text" id="form2Example1" placeholder="rollno" class="form-control" name="id" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 200px;"> 
+    <label class="form-label" for="form2Example2" >First Name</label>
+    <input type="text" id="form2Example2" placeholder="firstname" class="form-control" name="firstname" ngModel>
+    </div>
+    
+    <div class="form-outline" > 
+    <label class="form-label" for="form2Example3">Last Name</label>
+    <input type="text" id="form2Example3" placeholder="lastname" class="form-control" name="lastname" ngModel>
+    </div><br><br><br><br>
+    
+    <div class="form-outline" style="width: 170px;"> 
+      <label class="form-label" for="form2Example4">Gender</label>
+      <input type="text" id="form2Example4" placeholder="gender" class="form-control" name="gender" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example5">Branch</label>
+    <input type="text" id="form2Example5" placeholder="branch" class="form-control" name="branch" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example6">Year</label>
+    <input type="text" id="form2Example6" placeholder="year" class="form-control" name="year" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+      <label class="form-label" for="form2Example5">Sem</label>
+      <input type="text" id="form2Example5" placeholder="sem" class="form-control" name="sem" ngModel>
+      </div>
+    
+    <div class="form-outline" style="width: 220px;"> 
+    <label class="form-label" for="form2Example7">Mobile No.</label>
+    <input type="text" id="form2Example7" placeholder="mobileno" class="form-control" name="mobileno" ngModel>
+    </div><br>
+    
+      <div class="form-outline" style="width: 250px;"> 
+          <!-- <small class="text-danger">{{msg}}</small><br> -->
+        <label class="form-label" for="form2Example8">Email address</label>
+        <input type="email" id="form2Example8" placeholder="abc@xyz.com" class="form-control" name="email" ngModel>
+        <!-- <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div>  -->
+      </div><br><br><br><br><br>
+    
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example9">Password</label>
+        <input type="password" required minlength="5" maxlength="16" id="form2Example9" placeholder="password" class="form-control" name="password" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+      </div><br><br><br><br><br><br>
+      <button  class="button" type="submit" value="Insert" (click)="insertdetails2(insertdata)" >Submit</button><br>
+    </form>
+      </div><br><br>
+  </div>
+
+
+  <div *ngIf="div3">
+    <h2 style="text-align:center;"><span>C.E. Students SignUp</span></h2> 
+    <div class="container" style="background-color:white; padding: 15px 15px 60px 15px; border-radius: 15px;width: 600px;">
+      <!-- <h2 style="text-align:center;color: red;">Add Students</h2><br> -->
+    <form #insertdata="ngForm" (ngSubmit)="insertdetails3(insertdata)">
+    
+      <div class="form-outline" style="width: 100px;"> 
+      <label class="form-label" for="form2Example1">Roll No.</label>
+      <input type="text" id="form2Example1" placeholder="rollno" class="form-control" name="id" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 200px;"> 
+    <label class="form-label" for="form2Example2" >First Name</label>
+    <input type="text" id="form2Example2" placeholder="firstname" class="form-control" name="firstname" ngModel>
+    </div>
+    
+    <div class="form-outline" > 
+    <label class="form-label" for="form2Example3">Last Name</label>
+    <input type="text" id="form2Example3" placeholder="lastname" class="form-control" name="lastname" ngModel>
+    </div><br><br><br><br>
+    
+    <div class="form-outline" style="width: 170px;"> 
+      <label class="form-label" for="form2Example4">Gender</label>
+      <input type="text" id="form2Example4" placeholder="gender" class="form-control" name="gender" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example5">Branch</label>
+    <input type="text" id="form2Example5" placeholder="branch" class="form-control" name="branch" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example6">Year</label>
+    <input type="text" id="form2Example6" placeholder="year" class="form-control" name="year" ngModel>
+    </div>
+    
+    <div class="form-outline" style="width: 170px;"> 
+      <label class="form-label" for="form2Example5">Sem</label>
+      <input type="text" id="form2Example5" placeholder="sem" class="form-control" name="sem" ngModel>
+      </div>
+    
+    <div class="form-outline" style="width: 220px;"> 
+    <label class="form-label" for="form2Example7">Mobile No.</label>
+    <input type="text" id="form2Example7" placeholder="mobileno" class="form-control" name="mobileno" ngModel>
+    </div><br>
+    
+      <div class="form-outline" style="width: 250px;"> 
+          <!-- <small class="text-danger">{{msg}}</small><br> -->
+        <label class="form-label" for="form2Example8">Email address</label>
+        <input type="email" id="form2Example8" placeholder="abc@xyz.com" class="form-control" name="email" ngModel>
+        <!-- <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div>  -->
+      </div><br><br><br><br><br>
+    
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example9">Password</label>
+        <input type="password" required minlength="5" maxlength="16" id="form2Example9" placeholder="password" class="form-control" name="password" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+      </div><br><br><br><br><br><br>
+      <button  class="button" type="submit" value="Insert" (click)="insertdetails3(insertdata)" >Submit</button><br>
+    </form>
+      </div><br><br>
+  </div>
+
+  </div>

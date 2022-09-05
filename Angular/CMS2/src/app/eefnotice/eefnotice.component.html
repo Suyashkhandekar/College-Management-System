@@ -1,0 +1,88 @@
+<app-facultypanel></app-facultypanel>
+
+<div class="main">
+    <h1 style="text-align:center;"><span>Notice</span></h1><br><br>
+
+<div  style="margin: 30px;margin-left: 80px; float: left; width: 180px;">
+<button  class="button" (click)="div1Function()">All Notice</button>
+</div>
+
+<div  style="margin: 30px; float: left; width: 75px;margin-left:2px;">
+<button  class="button" (click)="div2Function()">Add</button>
+</div>
+
+<!-- <div style="margin: 30px; float: left; width: 110px;">
+<button  class="button" (click)="div3Function()">Update</button>
+</div> -->
+
+<div style="margin: 30px; float: left; width: 100px;">
+<button  class="button" (click)="div3Function()">Delete</button>
+</div>
+
+<div style="margin: 30px; float: left; width: 80px;">
+<button  class="button" (click)="div4Function()">Hide</button>
+</div><br><br><br><br>
+
+<div *ngIf="div1">
+    <div class="container" style="background-color:white; padding: 8px 15px 15px 15px; border-radius: 15px;width:1000px ;">
+      <h2 style="text-align:center;color: red;">All Notice</h2>
+          <table  cellspacing="15" style="width:100%" >
+          <tr>
+              <th style="width: 10px;">
+                 Sr.No.
+              </th>
+              <th>
+                 Notice
+              </th>
+          </tr>
+
+      
+          <tr *ngFor="let l of loginpages">
+          
+              <td>{{l.id}}</td>
+              <td style="height: 180px;">{{l.notice}}</td>
+          </tr>
+  
+    </table>
+    </div><br><br>
+  </div>
+
+<div *ngIf="div2">
+  <div class="container" style="background-color:white; padding: 15px 15px 60px 15px; border-radius: 15px;width: 1000px;height: 400px;">
+  <h2 style="text-align:center;color: red;">Add Notice</h2><br>
+<form #insertdata="ngForm" (ngSubmit)="insertdetails(insertdata)">
+
+  <div class="form-outline" style="width: 70px;"> 
+  <label class="form-label" for="form2Example1">Sr.No.</label>
+  <input type="text" id="form2Example1" placeholder="sr.no." class="form-control" name="id" ngModel>
+</div>
+
+<div class="form-outline" > 
+<label class="form-label" for="form2Example2" >Notice</label>
+<input type="text" id="form2Example2" placeholder="" class="form-control" maxlength="1000" name="notice" style="width: 850px;height: 180px ;" ngModel>
+</div><br><br><br><br><br><br><br><br><br><br>
+  <button  class="button" type="submit" value="Insert" (click)="insertdetails(insertdata)" style="margin-left: 450px ;" >Add </button><br>
+</form>
+  </div>
+</div>
+
+<div *ngIf="div3">
+    <div class="container" style="background-color:white; padding: 5px 5px 45px 5px; border-radius: 15px; width: 400px;">
+      <h2 style="text-align:center;color: red;">Delete Notice</h2>
+      <form #data="ngForm" (ngSubmit)="deleteLoginpage(data)">
+      <div class="form-outline" style="width: 200px;"> 
+      <label class="form-label" >Sr.No.</label>
+      <input type="text"  placeholder="sr.no." class="form-control" name="id" ngModel>
+      </div><br>
+      <button  class="button" type="submit" value="Delete" (click)="deleteLoginpage(data)" >Delete </button><br>
+      </form>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+

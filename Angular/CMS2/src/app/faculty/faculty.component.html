@@ -1,0 +1,104 @@
+<div class="container-xxl py-5">
+  <!-- <div class="main"> -->
+    <h1 style="text-align:center;"><span>Faculty Login</span></h1><br><br><br>
+
+<div  style=" float:left; width: 50px;margin-right: 0px;">
+<button  class="button" (click)="div1Function()">Mechanical Engg.</button>
+</div>
+
+<div  style=" float: left; width: 50px;margin-left:300px;">
+<button  class="button" (click)="div2Function()">Electronics Engg.</button>
+</div>
+
+<div style=" float: left; width: 50px;margin-left:600px;">
+<button  class="button" (click)="div3Function()">Computer Engg.</button>
+</div><br><br><br><br>
+
+<!-- <div style=" float: left; width: 50px;margin-left:785px;">
+<button  class="button" (click)="div4Function()">Hide</button>
+</div><br><br><br><br> -->
+
+<div *ngIf="div1">
+  <h2 style="text-align:center;"><span>M.E. Faculty Login</span></h2> 
+  <body style="padding-top: 0px;
+      padding-right: 500px;
+      padding-bottom: 50px;
+      padding-left: 500px;" >
+  <div class="container" style="background-color:white; padding: 25px; border-radius: 15px;">
+<form #loginform="ngForm" (ngSubmit)="loginFaculty1()">
+  <div class="form-outline mb-4">
+    <small class="text-danger">{{msg}}</small><br>
+    <label class="form-label" for="form2Example1">Email address</label>
+    <input type="email" id="form2Example1" placeholder="example@xyz.com" class="form-control" name="email" [(ngModel)]="faculty.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div> 
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Password</label>
+    <input type="password" required minlength="5" maxlength="16" id="form2Example2" placeholder="min 5 letters" class="form-control" name="password" #password="ngModel" [(ngModel)]="faculty.password">
+    <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>   
+  </div>
+
+  <button [disabled]="loginform.form.invalid" class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+</form>
+  </div>
+  </body>
+</div>
+
+
+<div *ngIf="div2">
+  <h2 style="text-align:center;"><span>E.E. Faculty Login</span></h2>
+  <body style="padding-top: 0px;
+      padding-right: 500px;
+      padding-bottom: 50px;
+      padding-left: 500px;" >
+  <div class="container" style="background-color:white; padding: 25px; border-radius: 15px;">
+<form #loginform="ngForm" (ngSubmit)="loginFaculty2()">
+  <div class="form-outline mb-4">
+    <small class="text-danger">{{msg}}</small><br>
+    <label class="form-label" for="form2Example1">Email address</label>
+    <input type="email" id="form2Example1" placeholder="example@xyz.com" class="form-control" name="email" [(ngModel)]="faculty.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div> 
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Password</label>
+    <input type="password" required minlength="5" maxlength="16" id="form2Example2" placeholder="min 5 letters" class="form-control" name="password" #password="ngModel" [(ngModel)]="faculty.password">
+    <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>   
+  </div>
+
+  <button [disabled]="loginform.form.invalid" class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+</form>
+  </div>
+  </body>
+</div>
+
+<div *ngIf="div3">
+  <h2 style="text-align:center;"><span>C.E. Faculty Login</span></h2>
+  <body style="padding-top: 0px;
+      padding-right: 500px;
+      padding-bottom: 50px;
+      padding-left: 500px;" >
+  <div class="container" style="background-color:white; padding: 25px; border-radius: 15px;">
+<form #loginform="ngForm" (ngSubmit)="loginFaculty3()">
+  <div class="form-outline mb-4">
+    <small class="text-danger">{{msg}}</small><br>
+    <label class="form-label" for="form2Example1">Email address</label>
+    <input type="email" id="form2Example1" placeholder="example@xyz.com" class="form-control" name="email" [(ngModel)]="faculty.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div> 
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Password</label>
+    <input type="password" required minlength="5" maxlength="16" id="form2Example2" placeholder="min 5 letters" class="form-control" name="password" #password="ngModel" [(ngModel)]="faculty.password">
+    <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>   
+  </div>
+
+  <button [disabled]="loginform.form.invalid" class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+</form>
+  </div>
+  </body>
+</div>
+
+<!-- </div> -->
+</div><br>
